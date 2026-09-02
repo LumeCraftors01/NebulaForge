@@ -20,7 +20,7 @@ binding   = "ASSETS"
 [[d1_databases]]
 binding       = "DB"
 database_name = "studio_wiki_db"
-database_id   = "d2915c4a-609b-4016-b745-4fca6e7596b6"
+database_id = "d2915c4a-609b-4016-b745-4fca6e7596b6"
 
 [observability]
 enabled = true
