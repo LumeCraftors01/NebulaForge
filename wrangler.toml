@@ -1,0 +1,26 @@
+# ============================================================
+#  RedGalaxy Studio / NebulaForge Studio — wiki app
+#  Cloudflare Workers config
+# ============================================================
+
+name = "redgalaxy-nebulaforge-wiki"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# Static frontend (public/) — served directly by Cloudflare's edge.
+# Requests that don't match a file (everything under /api/*) fall
+# through to the Worker below.
+[assets]
+directory = "./public"
+binding   = "ASSETS"
+
+# D1 database binding. Create the database first:
+#   wrangler d1 create studio_wiki_db
+# then paste the database_id it prints here.
+[[d1_databases]]
+binding       = "DB"
+database_name = "studio_wiki_db"
+database_id   = "d2915c4a-609b-4016-b745-4fca6e7596b6"
+
+[observability]
+enabled = true

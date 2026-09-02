@@ -1,0 +1,19 @@
+{
+  "name": "redgalaxy-nebulaforge-wiki",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create studio_wiki_db",
+    "db:schema": "wrangler d1 execute studio_wiki_db --remote --file=./schema.sql",
+    "db:schema:local": "wrangler d1 execute studio_wiki_db --local --file=./schema.sql",
+    "db:seed": "wrangler d1 execute studio_wiki_db --remote --file=./seed.sql",
+    "db:seed:local": "wrangler d1 execute studio_wiki_db --local --file=./seed.sql",
+    "create-account": "node scripts/create-account.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
