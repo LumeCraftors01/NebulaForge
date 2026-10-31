@@ -1,9 +1,5 @@
-# ============================================================
-#  RedGalaxy Studio / NebulaForge Studio — wiki app
-#  Cloudflare Workers config
-# ============================================================
-
-name = "redgalaxy-nebulaforge-wiki"
+# wrangler.toml
+name = 'crystalcollrctingsimulator'
 main = "src/index.js"
 compatibility_date = "2026-09-01"
 
